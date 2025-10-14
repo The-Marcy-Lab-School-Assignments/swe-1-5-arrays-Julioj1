@@ -7,7 +7,11 @@ const addToFrontOrBack = (arr, value, isFront) => {
   return;
 };
 
-const reverseString = () => {
+const reverseString = (string) => {
+  let newString = string.split("");
+  newString = newString.reverse();
+  newString = newString.join("");
+  return newString;
 };
 
 const newArrayFullOf = () => {
