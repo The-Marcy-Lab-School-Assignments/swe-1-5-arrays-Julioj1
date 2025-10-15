@@ -24,7 +24,8 @@ const insertIntoMiddle = (arr, value) => {
   arr.splice(Math.floor(arr.length / 2), 0, value)
 };
 
-const deleteFromMiddle = () => {
+const deleteFromMiddle = (arr) => {
+  arr.splice(Math.floor(arr.length / 2), 1)
 };
 
 const isRightIndex = () => {
