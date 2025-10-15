@@ -44,7 +44,8 @@ const roundAllNumsDown = (arr) => {
   return newArr;
 };
 
-const getAllYCoordinates = () => {
+const getAllYCoordinates = (arrOfCoords) => {
+  return arrOfCoords.map(coord => coord[1]);
 };
 
 module.exports = {
