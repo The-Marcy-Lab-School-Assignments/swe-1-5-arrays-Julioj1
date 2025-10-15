@@ -20,7 +20,8 @@ const newArrayFullOf = (value, numOfValue) => {
   return newArr;
 };
 
-const insertIntoMiddle = () => {
+const insertIntoMiddle = (arr, value) => {
+  arr.splice(Math.floor(arr.length / 2), 0, value)
 };
 
 const deleteFromMiddle = () => {
