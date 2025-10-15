@@ -28,7 +28,12 @@ const deleteFromMiddle = (arr) => {
   arr.splice(Math.floor(arr.length / 2), 1)
 };
 
-const isRightIndex = () => {
+const isRightIndex = (arr, value, index) => {
+  if (arr[index] === value) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 const roundAllNumsDown = () => {
