@@ -1,25 +1,51 @@
-const addToFrontOrBack = () => {
+const addToFrontOrBack = (arr, value, isFront) => {
+  if (isFront === true) {
+    arr.unshift(value);
+  } else if (isFront === false) {
+    arr.push(value);
+  }
+  return;
 };
 
-const reverseString = () => {
+const reverseString = (string) => {
+  let newString = string.split("");
+  newString = newString.reverse();
+  newString = newString.join("");
+  return newString;
 };
 
-const newArrayFullOf = () => {
+const newArrayFullOf = (value, numOfValue) => {
+  let newArr = Array(numOfValue);
+  newArr.fill(value);
+  return newArr;
 };
 
-const insertIntoMiddle = () => {
+const insertIntoMiddle = (arr, value) => {
+  arr.splice(Math.floor(arr.length / 2), 0, value)
 };
 
-const deleteFromMiddle = () => {
+const deleteFromMiddle = (arr) => {
+  arr.splice(Math.floor(arr.length / 2), 1)
 };
 
-const isRightIndex = () => {
+const isRightIndex = (arr, value, index) => {
+  if (arr[index] === value) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
-const roundAllNumsDown = () => {
+const roundAllNumsDown = (arr) => {
+  let newArr = [];
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(Math.floor(arr[i]));
+  }
+  return newArr;
 };
 
-const getAllYCoordinates = () => {
+const getAllYCoordinates = (arrOfCoords) => {
+  return arrOfCoords.map(coord => coord[1]);
 };
 
 module.exports = {
